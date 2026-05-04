@@ -54,6 +54,7 @@ function App() {
         onChange={(e) => setReason(e.target.value)}
         className="border p-2 rounded"
         >
+          <option value="" disabled>Choose reason</option>
           <option value="in best handwriting for the month of April 2026">in best handwriting for the month of april 2026</option>
           <option value="in discipline student for the month of April 2026">in discipline student for the month of april 2026</option>
           <option value="in neat and organized student for the month of April 2026">in neat and organized student for the month of april 2026</option>
