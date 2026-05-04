@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full min-h-screen p-6 bg-gray-100">
+    <div className="flex flex-col items-center w-fit min-h-screen p-6 bg-gray-100">
       <h1 className="text-2xl font-bold mb-6">
         Kaizen Academy Certificate Generator
       </h1>
