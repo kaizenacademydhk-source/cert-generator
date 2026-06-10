@@ -20,7 +20,7 @@ function App() {
     });
 
     const link = document.createElement("a");
-    link.download = ${name}-"certificate.jpg";
+    link.download = `${name}-certificate.jpg`;
     link.href = dataUrl;
     link.click();
   };
@@ -40,13 +40,7 @@ function App() {
           onChange={(e) => setName(e.target.value)}
           className="border p-2 rounded"
         />
-        <input
-          type="text"
-          placeholder="Enter month"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
-          className="border p-2 rounded"
-        />
+        
         <select
           value={position}
           onChange={(e) => setPosition(e.target.value)}
@@ -68,6 +62,13 @@ function App() {
           <option value="in neat and organized student for the month of ">in neat and organized student for the month of </option>
           <option value="in silent achiever student for the month of ">in silent achiever student for the month of </option>
         </select>
+        <input
+          type="text"
+          placeholder="Enter month"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+          className="border p-2 rounded"
+        />
       </div>
 
       {/* Certificate */}
