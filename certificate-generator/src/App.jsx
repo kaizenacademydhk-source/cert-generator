@@ -69,6 +69,7 @@ function App() {
           onChange={(e) => setMonth(e.target.value)}
           className="border p-2 rounded"
         />
+        <p>Enter month here</p>
       </div>
 
       {/* Certificate */}
