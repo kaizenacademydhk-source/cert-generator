@@ -55,10 +55,10 @@ function App() {
         className="border p-2 rounded"
         >
           <option value="">Choose reason</option>
-          <option value="in best handwriting for the month of April 2026">in best handwriting for the month of april 2026</option>
-          <option value="in discipline student for the month of April 2026">in discipline student for the month of april 2026</option>
-          <option value="in neat and organized student for the month of April 2026">in neat and organized student for the month of april 2026</option>
-          <option value="in silent achiever student for the month of April 2026">in silent achiever student for the month of april 2026</option>
+          <option value="in best handwriting for the month of April 2026">in best handwriting for the month of May 2026</option>
+          <option value="in discipline student for the month of April 2026">in discipline student for the month of May 2026</option>
+          <option value="in neat and organized student for the month of April 2026">in neat and organized student for the month of May 2026</option>
+          <option value="in silent achiever student for the month of April 2026">in silent achiever student for the month of May 2026</option>
         </select>
       </div>
 
