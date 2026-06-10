@@ -9,7 +9,7 @@ function App() {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("1st");
   const [reason, setReason] = useState(" ");
-  const [month, setMonth = useState(" ");
+  const [month, setMonth] = useState(" ");
 
   const downloadCertificate = async () => {
     const certificate = document.getElementById("certificate");
@@ -44,7 +44,7 @@ function App() {
           type="text"
           placeholder="Enter month"
           value={month}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setMonth(e.target.value)}
           className="border p-2 rounded"
         />
         <select
