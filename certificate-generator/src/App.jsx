@@ -20,7 +20,7 @@ function App() {
     });
 
     const link = document.createElement("a");
-    link.download = "certificate.jpg";
+    link.download = ${name}-"certificate.jpg";
     link.href = dataUrl;
     link.click();
   };
