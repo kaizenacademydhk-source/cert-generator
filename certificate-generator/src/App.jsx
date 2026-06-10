@@ -9,6 +9,7 @@ function App() {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("1st");
   const [reason, setReason] = useState(" ");
+  const [month, setMonth = useState(" ");
 
   const downloadCertificate = async () => {
     const certificate = document.getElementById("certificate");
@@ -39,6 +40,13 @@ function App() {
           onChange={(e) => setName(e.target.value)}
           className="border p-2 rounded"
         />
+        <input
+          type="text"
+          placeholder="Enter month"
+          value={month}
+          onChange={(e) => setName(e.target.value)}
+          className="border p-2 rounded"
+        />
         <select
           value={position}
           onChange={(e) => setPosition(e.target.value)}
@@ -55,10 +63,10 @@ function App() {
         className="border p-2 rounded"
         >
           <option value="">Choose reason</option>
-          <option value="in best handwriting for the month of April 2026">in best handwriting for the month of May 2026</option>
-          <option value="in discipline student for the month of April 2026">in discipline student for the month of May 2026</option>
-          <option value="in neat and organized student for the month of April 2026">in neat and organized student for the month of May 2026</option>
-          <option value="in silent achiever student for the month of April 2026">in silent achiever student for the month of May 2026</option>
+          <option value="in best handwriting for the month of ">in best handwriting for the month of </option>
+          <option value="in discipline student for the month of ">in discipline student for the month of </option>
+          <option value="in neat and organized student for the month of ">in neat and organized student for the month of </option>
+          <option value="in silent achiever student for the month of ">in silent achiever student for the month of </option>
         </select>
       </div>
 
@@ -118,7 +126,7 @@ function App() {
               </p>
 
               <p className="italic mt-2 text-gray-600">
-                {reason}
+                {reason} {month} 2026
               </p>
             </div>
 
