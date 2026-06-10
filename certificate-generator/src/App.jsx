@@ -26,94 +26,86 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full min-h-screen p-4 md:p-6 bg-gray-100">
-      <h1 className="text-xl md:text-2xl font-bold mb-6 text-center">
+    <div className="flex flex-col items-center w-fit min-h-screen p-6 bg-gray-100">
+      <h1 className="text-2xl font-bold mb-6">
         Kaizen Academy Certificate Generator
       </h1>
 
       {/* Inputs */}
-      <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-6 w-full max-w-xl">
+      <div className="flex gap-4 mb-6">
         <input
           type="text"
           placeholder="Enter student name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border p-2 rounded w-full"
+          className="border p-2 rounded"
         />
-
+        
         <select
           value={position}
           onChange={(e) => setPosition(e.target.value)}
-          className="border p-2 rounded w-full md:w-auto"
+          className="border p-2 rounded"
         >
           <option value="1st">1st</option>
           <option value="2nd">2nd</option>
           <option value="3rd">3rd</option>
         </select>
 
-        <select
-          value={reason}
-          onChange={(e) => setReason(e.target.value)}
-          className="border p-2 rounded w-full md:w-auto"
+        <select 
+        value={reason} 
+        onChange={(e) => setReason(e.target.value)}
+        className="border p-2 rounded"
         >
           <option value="">Choose reason</option>
-          <option value="in best handwriting for the month of ">
-            in best handwriting for the month of
-          </option>
-          <option value="in discipline student for the month of ">
-            in discipline student for the month of
-          </option>
-          <option value="in neat and organized student for the month of ">
-            in neat and organized student for the month of
-          </option>
-          <option value="in silent achiever student for the month of ">
-            in silent achiever student for the month of
-          </option>
+          <option value="in best handwriting for the month of ">in best handwriting for the month of </option>
+          <option value="in discipline student for the month of ">in discipline student for the month of </option>
+          <option value="in neat and organized student for the month of ">in neat and organized student for the month of </option>
+          <option value="in silent achiever student for the month of ">in silent achiever student for the month of </option>
         </select>
-
         <input
           type="text"
           placeholder="Enter month"
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-          className="border p-2 rounded w-full md:w-auto"
+          className="border p-2 rounded"
         />
+        <p>Enter month here</p>
       </div>
 
       {/* Certificate */}
       <div
         id="certificate"
-        className="w-full max-w-[1000px] aspect-[10/7] bg-white relative shadow-2xl flex items-center justify-center"
+        className="w-[1000px] h-[700px] bg-white relative shadow-2xl flex items-center justify-center"
         style={{
           background: "linear-gradient(135deg, #fff7ed, #ffffff)",
         }}
       >
         {/* Outer Border */}
-        <div className="border-[8px] md:border-[12px] border-yellow-700 w-full h-full p-2 md:p-3">
+        <div className="border-[12px] border-yellow-700 w-full h-full p-3">
           {/* Inner Border */}
-          <div className="border-2 md:border-4 border-yellow-400 w-full h-full flex flex-col items-center justify-between p-4 md:p-10 relative">
+          <div className="border-4 border-yellow-400 w-full h-full flex flex-col items-center justify-between p-10 relative">
             {/* Watermark */}
             <img
               src={logo}
-              className="absolute opacity-10 w-[200px] md:w-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute opacity-10 w-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               alt=""
             />
 
             {/* Top Logo */}
-            <img src={logo} className="w-12 md:w-20 absolute top-4 md:top-6 left-4 md:left-6" />
+            <img src={logo} className="w-20 absolute top-6 left-6" />
 
             {/* Title */}
             <div className="text-center mt-6">
               <h2
-                className="text-3xl md:text-5xl font-bold tracking-[2px] md:tracking-[6px]"
+                className="text-5xl font-bold tracking-[6px]"
                 style={{ fontFamily: "serif", color: "#92400e" }}
               >
                 KAIZEN ACADEMY
               </h2>
-              <div className="w-24 md:w-40 bg-yellow-600 mx-auto my-2 md:my-4"></div>
+              <div className="w-40  bg-yellow-600 mx-auto my-4"></div>
 
               <h3
-                className="text-lg md:text-2xl font-semibold tracking-[1px] md:tracking-[3px]"
+                className="text-2xl font-semibold tracking-[3px]"
                 style={{ color: "#92400e" }}
               >
                 CERTIFICATE OF APPRECIATION
@@ -121,13 +113,14 @@ function App() {
             </div>
 
             {/* Body */}
-            <div className="text-center text-sm md:text-lg leading-relaxed md:leading-loose px-4 md:px-16">
+            <div className="text-center text-lg leading-loose px-16">
               <p>This certificate is proudly presented to</p>
 
-              <h3 className="text-2xl md:text-4xl font-semibold my-4">
+              <h3 className="text-4xl font-semibold my-4">
                 {name || "Student Name"}
                 <div className="w-auto h-0.5 bg-yellow-600 mx-auto "></div>
               </h3>
+              
 
               <p>
                 for achieving <span className="font-bold">{position}</span>{" "}
@@ -140,23 +133,19 @@ function App() {
             </div>
 
             {/* Signatures */}
-            <div className="flex flex-col md:flex-row justify-around w-full px-4 md:px-10 mt-6 md:mt-10 gap-6 md:gap-0">
+            <div className="flex justify-around w-full px-10 mt-10">
               {/* Secretary */}
-              <div className="flex flex-col items-center mt-4 md:mt-0">
-                <img src={sigs} className="w-24 md:w-32 mb-2" />
-                <div className="border-t w-32 md:w-40"></div>
-                <p className="mt-2 text-sm md:text-base font-medium">
-                  Secretary, Kaizen Academy
-                </p>
+              <div className="flex flex-col items-center mt-4">
+                <img src={sigs} className="w-32 mb-2" />
+                <div className="border-t w-40"></div>
+                <p className="mt-2 font-medium">Secretary, Kaizen Academy</p>
               </div>
 
               {/* Principal */}
               <div className="flex flex-col items-center">
-                <img src={sigp} className="w-24 md:w-32 mb-2" />
-                <div className="border-t w-32 md:w-40"></div>
-                <p className="mt-2 text-sm md:text-base font-medium">
-                  Principal Kaizen Academy
-                </p>
+                <img src={sigp} className="w-32 mb-2" />
+                <div className="border-t w-40"></div>
+                <p className="mt-2 font-medium">Principal Kaizen Academy</p>
               </div>
             </div>
           </div>
@@ -166,7 +155,7 @@ function App() {
       {/* Button */}
       <button
         onClick={downloadCertificate}
-        className="mt-6 bg-blue-600 text-white px-4 md:px-6 py-2 rounded hover:opacity-90"
+        className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:opacity-90"
       >
         Download as JPG
       </button>
